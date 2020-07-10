@@ -3,7 +3,7 @@ import * as React from "react";
 import * as S from "./../../lib/style/header";
 import { logoImg } from "./../../assets";
 
-const HeaderLogo = () => (
+const HeaderLogo: React.FC = () => (
   <S.HeaderLogoContainer>
     <S.HeaderLogoImg src={logoImg} />
     <S.HeaderLogoTextGray>옷</S.HeaderLogoTextGray>

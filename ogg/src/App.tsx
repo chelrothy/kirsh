@@ -5,7 +5,7 @@ import { GlobalStyle } from "./lib/style/GlobalStyle";
 
 import * as P from "./pages";
 
-const App = () => (
+const App: React.FC = () => (
   <BrowserRouter>
     <GlobalStyle />
     <Switch>
