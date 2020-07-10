@@ -10,6 +10,7 @@ export const GlobalStyle: GlobalStyleComponent<
 > = createGlobalStyle`
       
       @import url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff');
+      @import url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/YanoljaYacheR.woff');
       
         html, body, div, span, applet, object, iframe,
         h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -30,7 +31,7 @@ export const GlobalStyle: GlobalStyleComponent<
         }
       
         html, body{
-          font-size: 20px;
+          font-size: 1.25em;
           font-family: 'NanumSquareRound', sans-serif;
           color: #707070;
         }
