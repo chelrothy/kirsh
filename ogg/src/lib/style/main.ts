@@ -13,13 +13,12 @@ export const MainSearchBarContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 1.125em;
+  padding: 0.8em 1.125em;
   width: 21.25em;
-  height: 2.5em;
   border-radius: 2em;
   box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.16);
   background-color: white;
-  margin-top: 5.5em;
+  margin: 5.5em 0 2.5em 0;
 `;
 
 export const MainSearchBarIcon = styled.img`
