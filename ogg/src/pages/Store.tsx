@@ -1,5 +1,7 @@
 import * as React from "react";
 
-const Store: React.FC = () => <div>store</div>;
+import StoreComponent from "./../components/Store";
+
+const Store: React.FC = () => <StoreComponent />;
 
 export default Store;
