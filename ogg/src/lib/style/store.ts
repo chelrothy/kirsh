@@ -76,7 +76,8 @@ export const StoreInfoContentPrice = styled.p`
 `;
 
 export const StoreReviewContainer = styled.div`
-  width: calc(100% - 25em);  
+  width: calc(100% - 25em);
+  margin-bottom: 3.75em;
 `;
 
 export const StoreReviewHeader = styled.header`
@@ -90,15 +91,15 @@ export const StoreReviewTitle = styled.h3`
   font-size: 0.875em;
 `;
 
-export const StoreReviewAddButton = styled.button`
+export const StoreReviewButton = styled.button`
   font-size: 0.625em;
-  color: #8A8D92;
+  color: #8a8d92;
   align-items: flex-end;
 `;
 
 export const StoreReviewItemContainer = styled.div`
   margin-top: 1em;
-  border-bottom: 1px solid #E6E6E6;
+  border-bottom: 1px solid #e6e6e6;
   padding-bottom: 0.7em;
 `;
 
@@ -115,4 +116,62 @@ export const StoreReviewStarsIcon = styled.img`
   width: 0.75em;
   height: 0.75em;
   margin-right: 0.1875em;
+`;
+
+export const StoreProductContainer = styled(StoreReviewItemContainer)`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+`;
+
+export const StoreProductContent = styled.section`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`;
+
+export const StoreProductImg = styled.img`
+  width: 4.375em;
+  height: 3.125em;
+  border-radius: 0.25em;
+  margin-right: 1em;
+  object-fit: cover;
+`;
+
+export const StoreProductHeader = styled.header`
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+`;
+
+export const StoreProductName = styled.h4`
+  display: inline-block;
+  font-size: 0.8125em;
+  margin: 0 0.5em 0.625em 0;
+  color: #5c5c5c;
+`;
+
+export const StoreProductReview = styled.p`
+  font-size: 0.625em;
+  width: 50em;
+  overflow: hidden;
+  margin-bottom: 0.375em;
+  color: #707070;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+`;
+
+export const StoreProductStarContainer = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+export const StoreProductStarIcon = styled.img`
+  width: 0.5em;
+  margin-right: 0.1em;
+`;
+
+export const StoreProductStarNumber = styled.p`
+  font-size: 0.5em;
 `;

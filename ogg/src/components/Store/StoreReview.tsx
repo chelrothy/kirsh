@@ -22,7 +22,7 @@ const StoreReview: React.FC = () => (
   <S.StoreReviewContainer>
     <S.StoreReviewHeader>
       <S.StoreReviewTitle>쇼핑몰 리뷰</S.StoreReviewTitle>
-      <S.StoreReviewAddButton>+ 등록하기</S.StoreReviewAddButton>
+      <S.StoreReviewButton>+ 등록하기</S.StoreReviewButton>
     </S.StoreReviewHeader>
     {reviews.map(review => (
       <StoreReviewItem store_review={review} />
