@@ -13,6 +13,7 @@ export const StoreInfoContainer = styled.div`
   display: flex;
   align-items: center;
   width: calc(100% - 25em);
+  margin-bottom: 2.5em;
 `;
 
 export const StoreInfoScoreContainer = styled.div`
@@ -72,4 +73,46 @@ export const StoreInfoContentPrice = styled.p`
   margin-left: 1em;
   font-size: 0.7em;
   color: #8a8d92;
+`;
+
+export const StoreReviewContainer = styled.div`
+  width: calc(100% - 25em);  
+`;
+
+export const StoreReviewHeader = styled.header`
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+`;
+
+export const StoreReviewTitle = styled.h3`
+  color: #222222;
+  font-size: 0.875em;
+`;
+
+export const StoreReviewAddButton = styled.button`
+  font-size: 0.625em;
+  color: #8A8D92;
+  align-items: flex-end;
+`;
+
+export const StoreReviewItemContainer = styled.div`
+  margin-top: 1em;
+  border-bottom: 1px solid #E6E6E6;
+  padding-bottom: 0.7em;
+`;
+
+export const StoreReviewItemText = styled.p`
+  font-size: 0.625em;
+  margin-bottom: 0.375em;
+`;
+
+export const StoreReivewStarsContainer = styled.div`
+  display: inline-block;
+`;
+
+export const StoreReviewStarsIcon = styled.img`
+  width: 0.75em;
+  height: 0.75em;
+  margin-right: 0.1875em;
 `;
