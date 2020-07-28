@@ -26,7 +26,7 @@ const initialState: ReviewState = {
   isOpen: false,
   review: {
     content: "",
-    score: 0
+    score: 1
   }
 };
 
