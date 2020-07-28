@@ -3,22 +3,52 @@ import * as React from "react";
 import * as S from "./../../lib/style/store";
 import { starIcon } from "./../../assets";
 
-const StoreInfo: React.FC = () => (
+type StoreInfoProps = {
+  store: {
+    id: number;
+    ranking: number;
+    name: string;
+    description: string;
+    average_score: number;
+    average_price: number;
+    picture: string;
+    store_review: {
+      content: string;
+      score: number;
+      datetime: string;
+    }[];
+    products: {
+      product_id: number;
+      name: string;
+      picture: string;
+      average_score: number;
+      reviews: {
+        content: string;
+        score: number;
+        datetime: string;
+      }[];
+    }[];
+  };
+};
+
+const StoreInfo: React.FC<StoreInfoProps> = ({ store }) => (
   <S.StoreInfoContainer>
     <S.StoreInfoScoreContainer>
-      <S.StoreInfoScore>1</S.StoreInfoScore>
+      <S.StoreInfoScore>{store.ranking}</S.StoreInfoScore>
     </S.StoreInfoScoreContainer>
     <S.StoreInfoContentContainer>
-      <S.StoreInfoContentName>언니가 간다</S.StoreInfoContentName>
+      <S.StoreInfoContentName>{store.name}</S.StoreInfoContentName>
       <S.StoreInfoContentDescription>
-        10대 20대를 위한 옷가게
+        {store.description}
         <S.StoreInfoContentStarContainer>
           <S.StoreInfoContentStarIcon src={starIcon} />
           <S.StoreInfoContentStarNumber>
-            <strong>4</strong>
+            <strong>{store.average_score}</strong>
           </S.StoreInfoContentStarNumber>
         </S.StoreInfoContentStarContainer>
-        <S.StoreInfoContentPrice>평균 가격대 / 20000원</S.StoreInfoContentPrice>
+        <S.StoreInfoContentPrice>
+          평균 가격대 / {store.average_price}원
+        </S.StoreInfoContentPrice>
       </S.StoreInfoContentDescription>
     </S.StoreInfoContentContainer>
   </S.StoreInfoContainer>
