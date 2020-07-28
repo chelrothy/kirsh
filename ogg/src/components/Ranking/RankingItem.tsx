@@ -10,7 +10,7 @@ type RankingItemProps = {
     ranking: number;
     name: string;
     description: string;
-    score: number;
+    average_score: number;
     average_price: number;
     picture: string;
   };

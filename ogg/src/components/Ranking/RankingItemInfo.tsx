@@ -9,7 +9,7 @@ type RankingItemInfoProps = {
     ranking: number;
     name: string;
     description: string;
-    score: number;
+    average_score: number;
     average_price: number;
     picture: string;
   };
@@ -22,7 +22,7 @@ const RankingItemInfo: React.FC<RankingItemInfoProps> = ({ ranking }) => (
     <S.RankingItemStarContainer>
       <S.RankingItemStarIcon src={starIcon} />
       <S.RankingItemStarNumber>
-        <strong>{ranking.score}</strong>
+        <strong>{ranking.average_score}</strong>
       </S.RankingItemStarNumber>
       <S.RankingItemPrice>
         평균 가격대 / {ranking.average_price}원
