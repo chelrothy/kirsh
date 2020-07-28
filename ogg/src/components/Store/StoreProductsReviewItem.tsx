@@ -1,10 +1,12 @@
 import * as React from "react";
+import { Link, match, withRouter, RouteComponentProps } from "react-router-dom";
 
 import * as S from "./../../lib/style/store";
 import { starIcon } from "./../../assets";
 
 type StoreProductsReviewItemProps = {
   products: {
+    product_id: number;
     name: string;
     picture: string;
     average_score: number;
@@ -14,10 +16,15 @@ type StoreProductsReviewItemProps = {
       datetime: string;
     }[];
   };
+} & RouteComponentProps<MatchParams>;
+
+type MatchParams = {
+  id: string;
 };
 
 const StoreProductsReviewItem: React.FC<StoreProductsReviewItemProps> = ({
-  products
+  products,
+  match
 }) => (
   <S.StoreProductContainer>
     <S.StoreProductContent>
@@ -44,8 +51,13 @@ const StoreProductsReviewItem: React.FC<StoreProductsReviewItemProps> = ({
         )}
       </div>
     </S.StoreProductContent>
-    <S.StoreReviewButton>더보기</S.StoreReviewButton>
+    <Link
+      to={`/${match.params.id}/${products.product_id}`}
+      style={{ textDecoration: "none" }}
+    >
+      <S.StoreReviewButton>더보기</S.StoreReviewButton>
+    </Link>
   </S.StoreProductContainer>
 );
 
-export default StoreProductsReviewItem;
+export default withRouter(StoreProductsReviewItem);

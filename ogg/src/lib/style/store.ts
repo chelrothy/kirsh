@@ -21,7 +21,7 @@ export const StoreInfoScoreContainer = styled.div`
   align-items: center;
   justify-content: center;
   width: 3.125em;
-  height: 3.215em;
+  height: 3.125em;
   border-radius: 100%;
   background-color: #ff9da5;
   margin-right: 1em;
@@ -211,4 +211,16 @@ export const StoreReviewInputButtons = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+`;
+
+export const StoreProductCover = styled.img`
+  width: 5em;
+  height: 4em;
+  border-radius: 0.75em;
+  object-fit: cover;
+  margin-right: 1em;
+`;
+
+export const StoreProductContentName = styled(StoreInfoContentName)`
+  margin-left: 0.5em;
 `;

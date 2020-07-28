@@ -34,7 +34,7 @@ type StoreState = {
   }[];
 };
 
-const initialState: StoreState = {
+export const initialState: StoreState = {
   id: 2,
   ranking: 1,
   name: "재현이가 로딩 중",
