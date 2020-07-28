@@ -15,6 +15,7 @@ const App: React.FC = () => (
       <Route path="/:id" component={P.Store} exact />
       <Route path="/:id/:product" component={P.Product} exact />
     </Switch>
+    {/* <P.Auth /> */}
   </BrowserRouter>
 );
 

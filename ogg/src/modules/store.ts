@@ -73,7 +73,7 @@ const store = (state: StoreState = initialState, action: StoreAction) => {
     case INIT_STORE:
       return initialState;
     case UPDATE_STORE:
-      return initialState;
+      return action.payload;
     default:
       return state;
   }
