@@ -22,11 +22,11 @@ const getStarsColor = (score: number) => {
 };
 
 const StoreReviewStars: React.FC<StoreReviewStarsProps> = ({ score }) => (
-  <S.StoreReivewStarsContainer>
+  <S.StoreReviewStarsContainer>
     {getStarsColor(score).map(star => (
       <S.StoreReviewStarsIcon src={star} />
     ))}
-  </S.StoreReivewStarsContainer>
+  </S.StoreReviewStarsContainer>
 );
 
 export default StoreReviewStars;

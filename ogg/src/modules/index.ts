@@ -1,6 +1,8 @@
 import { combineReducers } from "redux";
 
-const rootReducer = combineReducers({});
+import review from "./review";
+
+const rootReducer = combineReducers({ review });
 
 export default rootReducer;
 

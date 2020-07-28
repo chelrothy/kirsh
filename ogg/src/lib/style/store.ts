@@ -108,7 +108,7 @@ export const StoreReviewItemText = styled.p`
   margin-bottom: 0.375em;
 `;
 
-export const StoreReivewStarsContainer = styled.div`
+export const StoreReviewStarsContainer = styled.div`
   display: inline-block;
 `;
 
@@ -174,4 +174,41 @@ export const StoreProductStarIcon = styled.img`
 
 export const StoreProductStarNumber = styled.p`
   font-size: 0.5em;
+`;
+
+export const StoreReviewInputContainer = styled.div`
+  font-size: 0.625em;
+`;
+
+export const StoreReviewInputBox = styled.textarea`
+  all: unset;
+  border: 1px solid #e6e6e6;
+  width: calc(100% - 1em);
+  height: 4em;
+  padding: 0.5em;
+  margin-top: 1em;
+  resize: none;
+
+  &::placeholder {
+    color: #cccccc;
+  }
+`;
+
+export const StoreReviewStarRadio = styled.input`
+  display: none;
+`;
+
+export const StoreReviewStarsLabel = styled(StoreReviewStarsIcon)`
+  margin-top: 0.5em;
+  width: 1.3em;
+  height: 1.3em;
+  margin-right: 0.3em;
+`;
+
+export const StoreReviewSubmitButton = styled.button``;
+
+export const StoreReviewInputButtons = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 `;

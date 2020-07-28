@@ -2,6 +2,8 @@ import * as React from "react";
 
 import * as S from "./../../lib/style/store";
 import StoreReviewItem from "./StoreReviewItem";
+import StoreReviewInput from "./StoreReviewInput";
+import useReviewToggle from "./../../hooks/review/useReviewToggle";
 
 const reviews = [
   {
@@ -18,16 +20,21 @@ const reviews = [
   }
 ];
 
-const StoreReview: React.FC = () => (
-  <S.StoreReviewContainer>
-    <S.StoreReviewHeader>
-      <S.StoreReviewTitle>쇼핑몰 리뷰</S.StoreReviewTitle>
-      <S.StoreReviewButton>+ 등록하기</S.StoreReviewButton>
-    </S.StoreReviewHeader>
-    {reviews.map(review => (
-      <StoreReviewItem store_review={review} />
-    ))}
-  </S.StoreReviewContainer>
-);
+const StoreReview: React.FC = () => {
+  const { toggleState, changeToggle } = useReviewToggle();
+
+  return (
+    <S.StoreReviewContainer>
+      <S.StoreReviewHeader>
+        <S.StoreReviewTitle>쇼핑몰 리뷰</S.StoreReviewTitle>
+        <S.StoreReviewButton onClick={() => changeToggle()}>+ 등록하기</S.StoreReviewButton>
+      </S.StoreReviewHeader>
+      {toggleState && <StoreReviewInput />}
+      {reviews.map(review => (
+        <StoreReviewItem store_review={review} />
+      ))}
+    </S.StoreReviewContainer>
+  );
+};
 
 export default StoreReview;
