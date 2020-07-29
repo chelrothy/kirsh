@@ -20,8 +20,8 @@ export default function useCreateProduct() {
       const formData = new FormData();
       formData.append("product_name", formState.product_name);
       formData.append("picture", formState.picture);
-      console.log(formData);
       await postProduct(storeID, formData);
+      window.location.reload();
     } catch (error) {
       console.log(error);
     }
@@ -32,10 +32,9 @@ export default function useCreateProduct() {
     [dispatch]
   );
 
-  const setPicture = useCallback(
-    picture => dispatch(updatePicture(picture)),
-    [dispatch]
-  );
+  const setPicture = useCallback(picture => dispatch(updatePicture(picture)), [
+    dispatch
+  ]);
 
   return { submitNewProduct, setProductName, setPicture };
 }

@@ -11,6 +11,7 @@ const CreateProduct: React.FC = () => {
 
   const onClickButton = () => {
     submitNewProduct();
+    setModalClosed();
   };
 
   const handleFiles = (files: FileList | null) => {
