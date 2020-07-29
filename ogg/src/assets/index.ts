@@ -4,5 +4,14 @@ import logoImg from "./logo.png";
 import searchIcon from "./search-icon.png";
 import starIcon from "./star.png";
 import grayStarIcon from "./gray-star.png";
+import closeIcon from "./close.png";
 
-export { mainBgImg, detailBgImg, logoImg, searchIcon, starIcon, grayStarIcon };
+export {
+  mainBgImg,
+  detailBgImg,
+  logoImg,
+  searchIcon,
+  starIcon,
+  grayStarIcon,
+  closeIcon
+};
