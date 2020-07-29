@@ -81,3 +81,39 @@ export const RankingItemImg = styled.img`
   object-fit: cover;
   border-radius: 0.25em;
 `;
+
+export const RankingNoResultContainer = styled.div`
+  margin-top: 1em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+
+  & p {
+    font-size: 0.75em;
+    color: #8a8d92;
+    line-height: 3em;
+  }
+
+  img {
+    display: block;
+    width: 3.2em;
+    height: 5em;
+    margin-top: 1em;
+  }
+
+  button {
+    margin-top: 3em;
+    text-align: center;
+    font-size: 0.75em;
+    color: white;
+    border-radius: 1.25em;
+    background: linear-gradient(
+      90deg,
+      rgba(254, 46, 62, 0.60) 0%,
+      rgba(255, 149, 46, 0.60) 100%
+    );
+    width: 14.75em;
+    padding: 0.5625em;
+  }
+`;

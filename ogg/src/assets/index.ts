@@ -5,6 +5,7 @@ import searchIcon from "./search-icon.png";
 import starIcon from "./star.png";
 import grayStarIcon from "./gray-star.png";
 import closeIcon from "./close.png";
+import questionIcon from "./questionmark.png";
 
 export {
   mainBgImg,
@@ -13,5 +14,6 @@ export {
   searchIcon,
   starIcon,
   grayStarIcon,
-  closeIcon
+  closeIcon,
+  questionIcon
 };

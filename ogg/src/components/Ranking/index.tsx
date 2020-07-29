@@ -1,8 +1,8 @@
 import * as React from "react";
 
 import useRanking from "./../../hooks/ranking/useRanking";
-
 import RankingItem from "./RankingItem";
+import RankingNoResult from "./RankingNoResult";
 
 type RankingType = {
   id: number;
@@ -19,9 +19,11 @@ const Ranking: React.FC = () => {
 
   return (
     <div>
-      {ranking.map(item => (
-        <RankingItem ranking={item} />
-      ))}
+      {ranking.length !== 0 ? (
+        ranking.map(item => <RankingItem ranking={item} />)
+      ) : (
+        <RankingNoResult />
+      )}
     </div>
   );
 };

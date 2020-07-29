@@ -19,6 +19,7 @@ export default function useRanking() {
       dispatch(updateRanking(response.data));
     } catch (error) {
       console.log(error);
+      dispatch(updateRanking([]));
     }
   };
 
