@@ -8,6 +8,8 @@ import StoreInfo from "./StoreInfo";
 import StoreReview from "./StoreReview";
 import StoreProductsReview from "./StoreProductsReview";
 import useStore from "./../../hooks/store/useStore";
+import CreateProduct from "./../CreateProduct";
+import useCreateProductModal from "./../../hooks/product/useCreateProductModal";
 
 type StoreProps = RouteComponentProps<MatchParams>;
 
@@ -17,12 +19,14 @@ type MatchParams = {
 
 const Store: React.FC<StoreProps> = ({ match }) => {
   const storeState = useStore(parseInt(match.params.id));
+  const {isOpen, setModalOpened, setModalClosed} = useCreateProductModal();
 
   return (
     <S.StoreContainer>
       <StoreInfo store={storeState} />
       <StoreReview store={storeState} />
       <StoreProductsReview store={storeState} />
+      {isOpen && <CreateProduct />}
       <BS.BackgroundImg src={detailBgImg} />
     </S.StoreContainer>
   );

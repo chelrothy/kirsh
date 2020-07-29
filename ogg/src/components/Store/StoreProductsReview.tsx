@@ -2,6 +2,9 @@ import * as React from "react";
 
 import * as S from "./../../lib/style/store";
 import StoreProductsReviewItem from "./StoreProductsReviewItem";
+import { getToken } from "./../../lib/token";
+import useAuthOpen from "./../../hooks/auth/useAuthOpen";
+import useCreateProductModal from "./../../hooks/product/useCreateProductModal";
 
 type StoreProductsReviewProps = {
   store: {
@@ -31,16 +34,28 @@ type StoreProductsReviewProps = {
   };
 };
 
-const StoreProductsReview: React.FC<StoreProductsReviewProps> = ({ store }) => (
-  <S.StoreReviewContainer>
-    <S.StoreReviewHeader>
-      <S.StoreReviewTitle>상품 리뷰</S.StoreReviewTitle>
-      <S.StoreReviewButton>+ 상품 등록하기</S.StoreReviewButton>
-    </S.StoreReviewHeader>
-    {store.products.map(item => (
-      <StoreProductsReviewItem products={item} />
-    ))}
-  </S.StoreReviewContainer>
-);
+const StoreProductsReview: React.FC<StoreProductsReviewProps> = ({ store }) => {
+  const { isOpen, setModalOpened, setModalClosed } = useCreateProductModal();
+  const openAuthModal = useAuthOpen();
+
+  return (
+    <S.StoreReviewContainer>
+      <S.StoreReviewHeader>
+        <S.StoreReviewTitle>상품 리뷰</S.StoreReviewTitle>
+        <S.StoreReviewButton
+          onClick={() => {
+            if (getToken()) return setModalOpened();
+            return openAuthModal();
+          }}
+        >
+          + 상품 등록하기
+        </S.StoreReviewButton>
+      </S.StoreReviewHeader>
+      {store.products.map(item => (
+        <StoreProductsReviewItem products={item} />
+      ))}
+    </S.StoreReviewContainer>
+  );
+};
 
 export default StoreProductsReview;

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const AuthBackground = styled.div`
+export const CreateProductBackground = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,36 +11,36 @@ export const AuthBackground = styled.div`
   background-color: rgba(0, 0, 0, 0.5);
 `;
 
-export const AuthContainer = styled.section`
+export const CreateProductContainer = styled.section`
   width: 12.5em;
   height: 21.8125em;
   background-color: white;
   border-radius: 0.125em;
 `;
 
-export const AuthHeader = styled.header`
+export const CreateProductHeader = styled.header`
   margin-top: 0.625em;
   text-align: center;
 `;
 
-export const AuthLogoText = styled.h1`
+export const CreateProductLogoText = styled.h1`
   display: inline-block;
   font-family: "YanoljaYacheR";
   font-size: 0.875em;
   color: #ff5a4c;
 `;
 
-export const AuthLogoTextGray = styled(AuthLogoText)`
+export const CreateProductLogoTextGray = styled(CreateProductLogoText)`
   color: #65686c;
   padding-left: 0.625em;
 `;
 
-export const AuthCloseIcon = styled.img`
+export const CreateProductCloseIcon = styled.img`
   float: right;
   padding-right: 0.625em;
 `;
 
-export const AuthMainText = styled.p`
+export const CreateProductMainText = styled.p`
   margin-top: 2.125em;
   font-size: 0.8125em;
   text-align: center;
@@ -48,33 +48,33 @@ export const AuthMainText = styled.p`
   color: #333333;
 `;
 
-export const AuthSubText = styled.p`
+export const CreateProductSubText = styled.p`
   font-size: 0.5em;
   text-align: center;
   margin-top: 1em;
   line-height: 1.75em;
 `;
 
-export const AuthFormContainer = styled.div`
+export const CreateProductFormContainer = styled.div`
   width: 11.25em;
   padding: 1.25em 0.625em;
 `;
 
-export const AuthForm = styled.div`
+export const CreateProduct = styled.div`
   width: 100%;
 `;
 
-export const AuthFormLabel = styled.label`
+export const CreateProductLabel = styled.label`
   font-size: 0.4375em;
 `;
 
-export const AuthFormInput = styled.input`
+export const CreateProductInput = styled.input`
   all: unset;
   font-size: 0.5em;
   color: #333333;
   padding: 1em;
   width: calc(100% - 2em);
-  border: 1px solid #E1E2E3;
+  border: 1px solid #e1e2e3;
   border-radius: 0.4em;
 
   &::placeholder {
@@ -82,13 +82,13 @@ export const AuthFormInput = styled.input`
   }
 `;
 
-export const AuthFormButton = styled.button`
+export const CreateProductButton = styled.button`
   margin-top: 1.5em;
   width: 100%;
   text-align: center;
   padding: 1em 0;
   font-size: 0.5em;
   color: white;
-  background-color: #FF5A4C;
-  border-radius: 2em;  
+  background-color: #ff5a4c;
+  border-radius: 2em;
 `;
