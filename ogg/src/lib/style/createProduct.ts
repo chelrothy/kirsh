@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const CreateProductBackground = styled.div`
+  z-index: 999;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,6 +17,7 @@ export const CreateProductContainer = styled.section`
   height: 21.8125em;
   background-color: white;
   border-radius: 0.125em;
+  overflow: scroll;
 `;
 
 export const CreateProductHeader = styled.header`

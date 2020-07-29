@@ -1,19 +1,31 @@
 import * as React from "react";
 
 import * as S from "./../../lib/style/createProduct";
+import CreateStoreStarInput from "./CreateStoreStarInput";
 import { closeIcon } from "./../../assets";
+import useCreateStore from "./../../hooks/store/useCreateStore";
 
 const CreateStore: React.FC = () => {
+  const {
+    setStoreName,
+    setDescription,
+    setAveragePrice,
+    setPicture,
+    submitNewStore,
+    setModalClosed
+  } = useCreateStore();
+
   const onClickButton = () => {
-    // submitNewProduct();
+    submitNewStore();
+    setModalClosed();
   };
 
-  // const handleFiles = (files: FileList | null) => {
-  //   if (files) {
-  //     const picture = files[0];
-  //     setPicture(picture);
-  //   }
-  // };
+  const handleFiles = (files: FileList | null) => {
+    if (files) {
+      const picture = files[0];
+      setPicture(picture);
+    }
+  };
 
   return (
     <S.CreateProductBackground>
@@ -26,7 +38,7 @@ const CreateStore: React.FC = () => {
           <S.CreateProductCloseIcon
             src={closeIcon}
             alt="닫기"
-            // onClick={() => setModalClosed()}
+            onClick={() => setModalClosed()}
           />
         </S.CreateProductHeader>
         <S.CreateProductMainText>쇼핑몰 생성하기</S.CreateProductMainText>
@@ -35,27 +47,33 @@ const CreateStore: React.FC = () => {
         </S.CreateProductSubText>
         <S.CreateProductFormContainer>
           <S.CreateProductLabel>쇼핑몰 이름</S.CreateProductLabel>
-          <S.CreateProductInput placeholder="쇼핑몰 이름을 입력해 주세요." />
+          <S.CreateProductInput
+            placeholder="쇼핑몰 이름을 입력해 주세요."
+            onChange={e => setStoreName(e.target.value)}
+          />
           <S.CreateProductLabel>대표 사진</S.CreateProductLabel>
           <S.CreateProductInput
             type="file"
             placeholder="대표 사진을 등록해 주세요."
+            onChange={e => handleFiles(e.target.files)}
           />
           <S.CreateProductLabel>쇼핑몰 설명</S.CreateProductLabel>
           <S.CreateProductInput
             type="text"
             placeholder="쇼핑몰을 짧게 설명해 주세요."
+            onChange={e => setDescription(e.target.value)}
           />
-          <S.CreateProductLabel>쇼핑몰 평점</S.CreateProductLabel>
-          <S.CreateProductInput
-            type="text"
-            placeholder="평점을 입력해 주세요."
-          />
+
           <S.CreateProductLabel>평균 가격대</S.CreateProductLabel>
           <S.CreateProductInput
             type="text"
             placeholder="평균 가격대를 입력해 주세요."
+            onChange={e => setAveragePrice(e.target.value)}
           />
+          <S.CreateProductLabel>쇼핑몰 평점</S.CreateProductLabel>
+          <br />
+          <CreateStoreStarInput />
+          <br />
           <S.CreateProductButton onClick={() => onClickButton()}>
             이 쇼핑몰 생성하기
           </S.CreateProductButton>

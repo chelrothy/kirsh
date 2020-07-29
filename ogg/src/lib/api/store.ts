@@ -37,3 +37,12 @@ export const postProductReview = async (
     }
   );
 };
+
+export const postNewStore = async (store: FormData) => {
+  return await axios.post(`${baseURL}/store`, store, {
+    headers: {
+      Authorization: `Bearer ${getToken()}`,
+      "Content-Type": "multipart/form-data"
+    }
+  });
+};

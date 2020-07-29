@@ -5,13 +5,15 @@ import ranking from "./ranking";
 import store from "./store";
 import auth from "./auth";
 import createProduct from "./createProduct";
+import createStore from "./createStore";
 
 const rootReducer = combineReducers({
   review,
   ranking,
   store,
   auth,
-  createProduct
+  createProduct,
+  createStore
 });
 
 export default rootReducer;
