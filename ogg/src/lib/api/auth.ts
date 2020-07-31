@@ -22,3 +22,21 @@ export const login = async ({
     }
   );
 };
+
+export const signup = async ({
+  id,
+  password,
+  name
+}: {
+  id: string;
+  password: string;
+  name: string;
+}) => {
+  return await axios.post(
+    `${baseURL}/signup`,
+    { id, password, name },
+    {
+      headers: { "Content-Type": "application/json" }
+    }
+  );
+};

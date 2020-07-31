@@ -6,6 +6,7 @@ import store from "./store";
 import auth from "./auth";
 import createProduct from "./createProduct";
 import createStore from "./createStore";
+import signup from "./signup";
 
 const rootReducer = combineReducers({
   review,
@@ -13,7 +14,8 @@ const rootReducer = combineReducers({
   store,
   auth,
   createProduct,
-  createStore
+  createStore,
+  signup
 });
 
 export default rootReducer;

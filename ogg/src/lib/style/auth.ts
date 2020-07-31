@@ -15,6 +15,7 @@ export const AuthContainer = styled.section`
   width: 12.5em;
   height: 21.8125em;
   background-color: white;
+  overflow: scroll;
   border-radius: 0.125em;
 `;
 
@@ -62,6 +63,13 @@ export const AuthFormContainer = styled.div`
 
 export const AuthForm = styled.div`
   width: 100%;
+
+  & p {
+    text-align: center;
+    font-size: 0.4375em;
+    margin: 0.3175em 0;
+    color: #969696;
+  }
 `;
 
 export const AuthFormLabel = styled.label`
@@ -91,4 +99,11 @@ export const AuthFormButton = styled.button`
   color: white;
   background-color: #FF5A4C;
   border-radius: 2em;  
+`;
+
+export const AuthFormSigninButton = styled(AuthFormButton)`
+  margin: 0;
+  color: #333333;
+  background-color: white;
+  border: 1px solid #E1E2E3;
 `;

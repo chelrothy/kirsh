@@ -3,10 +3,13 @@ import * as React from "react";
 import * as S from "./../../lib/style/auth";
 import { closeIcon } from "./../../assets";
 import AuthLoginForm from "./AuthLoginForm";
+import AuthSignupForm from "./AuthSignupForm";
 import useAuthClose from "./../../hooks/auth/useAuthClose";
+import useAuthState from "./../../hooks/auth/useAuthState";
 
 const Auth: React.FC = () => {
   const closeAuth = useAuthClose();
+  const { status, changeStatus } = useAuthState();
 
   return (
     <S.AuthBackground>
@@ -32,7 +35,7 @@ const Auth: React.FC = () => {
           <br />
           리뷰를 통해 당신의 생각을 남겨 주세요.
         </S.AuthSubText>
-        <AuthLoginForm />
+        {status === "signup" ? <AuthSignupForm /> : <AuthLoginForm />}
       </S.AuthContainer>
     </S.AuthBackground>
   );

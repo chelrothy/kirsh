@@ -1,15 +1,15 @@
 import * as React from "react";
 
-import * as S from "./../../lib/style/auth";
+import * as S from "../../lib/style/auth";
 
 type AuthInputFormProps = {
   value: string;
-  onChange: (name: "id" | "password", value: string) => void;
+  onChange: (name: "id" | "password" | "name", value: string) => void;
   placeholder: string;
-  type: "id" | "password";
+  type: "id" | "password" | "name";
 };
 
-const AuthInputForm: React.FC<AuthInputFormProps> = ({
+const AuthInputSignupForm: React.FC<AuthInputFormProps> = ({
   value,
   onChange,
   placeholder,
@@ -22,12 +22,10 @@ const AuthInputForm: React.FC<AuthInputFormProps> = ({
         type={type}
         placeholder={placeholder}
         value={value}
-        onChange={e =>
-          onChange(type === "password" ? "password" : "id", e.target.value)
-        }
+        onChange={e => onChange(type, e.target.value)}
       />
     </>
   );
 };
 
-export default AuthInputForm;
+export default AuthInputSignupForm;

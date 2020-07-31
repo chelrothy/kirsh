@@ -19,7 +19,10 @@ export default function useLogin() {
 
   const postAuthInfo = async () => {
     try {
-      const response = await login(authInfo);
+      const response = await login({
+        id: authInfo.id,
+        password: authInfo.password
+      });
 
       if (response.status === 200) {
         setToken(response.data.access_token);

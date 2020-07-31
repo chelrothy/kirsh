@@ -18,7 +18,7 @@ const HeaderAuthBtn: React.FC = () => {
           로그아웃
         </S.HeaderAuthBtn>
       ) : (
-        <S.HeaderAuthBtn onClick={() => onClickLogin()}>로그인</S.HeaderAuthBtn>
+        <S.HeaderAuthBtn onClick={() => onClickLogin()}>로그인/회원가입</S.HeaderAuthBtn>
       )}
     </>
   );
